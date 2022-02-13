@@ -4,21 +4,19 @@
 
 def sum arr
   # YOUR CODE HERE
-  
   arr.inject(0, :+)
 end
 
 def max_2_sum arr
   # YOUR CODE HERE
-  
   sum(arr.max(2))
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  sum_arr = arr.combination(2).to_a
   
-  pair_arr = arr.combination(2).to_a
-  pair_arr.any? {|i| i[0] + i[1] == n}
+  sum_arr.any? {|i| i[0] + i[1] == n}
 end
 
 # Part 2
@@ -37,8 +35,8 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
-  
   return true if s == '0'
+  
   /^[10]*00$/.match(s)
 end
 
